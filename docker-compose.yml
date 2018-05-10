@@ -1,0 +1,26 @@
+###############################################################################
+## PostgreSQL Docker container
+##
+## Usage: docker-compose run -d --name postgres postgres
+##
+## Author: Bob Brady
+##
+###############################################################################
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
+      - pgdata:/var/lib/postgres/data
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=test
+    container_name: postgres
+
+volumes:
+  pgdata:
+    driver: local
