@@ -14,16 +14,15 @@ The init.d directory contains scripts that will be run in alphabetical order at 
 
 First, build the image and run in background detached mode:
 ```
-docker-compose run -d --name postgres postgres
+# builds the image if doesn't exist, binds port 5432 on localhost to container db
+docker-compose up -d
 ```
 
 Next, obtain an interactive bash shell to the running container:
 ```
 docker exec -it postgres bash
-```
 
-Use the psql CLI to issue SQL statements
-```
+# Use the psql CLI to issue SQL statements
 psql -U test -d test
 
 ```
