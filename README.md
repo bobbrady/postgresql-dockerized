@@ -5,9 +5,9 @@ A simple PostgreSQL docker container with usage instructions, utilizing the last
 
 The docker container is built and run via the docker-compose.yml script in this project. The following are the defaults:
 
-User: test
-Password: test
-Database: test
+* User: test
+* Password: test
+* Database: test
 
 The init.d directory contains scripts that will be run in alphabetical order at server start-up time.  You can add/remove/modify scripts here.  There is a starter script `10-test-ddl.sql` with DDL to create a table on start-up.
 
