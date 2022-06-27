@@ -27,7 +27,7 @@ Next, obtain an interactive bash shell to the running container:
 docker exec -it postgres bash
 
 # Use the psql CLI to issue SQL statements
-psql -U test -d test
+psql -U root -d test_db
 
 ```
 
