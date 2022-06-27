@@ -14,11 +14,12 @@ services:
       - "5432:5432"
     volumes:
       - ./initdb.d:/docker-entrypoint-initdb.d
-      - pgdata:/var/lib/postgres/data
+      - pgdata:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=test_db
+      - PGDATA=/var/lib/postgresql/data/pgdata
     container_name: postgres
 
 volumes:
