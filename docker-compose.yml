@@ -6,7 +6,7 @@
 ## Author: Bob Brady
 ##
 ###############################################################################
-version: '3'
+version: "3"
 services:
   postgres:
     image: postgres:latest
@@ -16,9 +16,9 @@ services:
       - ./initdb.d:/docker-entrypoint-initdb.d
       - pgdata:/var/lib/postgres/data
     environment:
-      - POSTGRES_USER=test
-      - POSTGRES_PASSWORD=test
-      - POSTGRES_DB=test
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=test_db
     container_name: postgres
 
 volumes:
